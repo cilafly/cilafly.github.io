@@ -9,12 +9,12 @@ body {
 /* ======== الحاوية الرئيسية (Container) ======== */
 .container {
     width: 100%;
-    max-width: 1200px; /* زدنا العرض قليلاً ليناسب 5 بطاقات */
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    box-sizing: border-box; /* مهم جداً لضبط الحسابات */
+    box-sizing: border-box;
 }
 
 /* ======== القائمة الرئيسية ======== */
@@ -75,17 +75,51 @@ body {
     transform: scale(1.05);
 }
 
-/* ======== القسم الرئيسي (Hero) ======== */
-.hero-section {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/hero-background.png');
-    background-size: cover;
-    background-position: center center;
+/* ======== القسم الرئيسي (Hero Slider) ======== */
+.hero-slider {
+    position: relative;
     height: 80vh;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    background-color: #333; /* لون احتياطي أثناء التحميل */
 }
 
-.hero-section .container {
+.hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 1;
+}
+
+.hero-slider .slide.active {
+    opacity: 1;
+}
+
+.hero-slider .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    z-index: 2;
+}
+
+.slide-text {
+    position: relative;
+    height: 100%;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    z-index: 3;
+}
+
+.slide-text .container {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -94,15 +128,16 @@ body {
     text-align: center;
 }
 
-.hero-section h1 {
+.slide-text h1 {
     font-size: 60px;
     font-weight: 900;
     margin-bottom: 15px;
 }
 
-.hero-section p {
+.slide-text p {
     font-size: 24px;
 }
+
 
 /* ======== قسم العروض ======== */
 .offers {
@@ -129,6 +164,8 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
 }
 
 .offer-card:hover {
@@ -144,6 +181,9 @@ body {
 
 .card-content {
     padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .card-content h3 {
@@ -156,6 +196,7 @@ body {
 .card-content p {
     margin-bottom: 20px;
     color: #666;
+    flex-grow: 1;
 }
 
 .details-button {
@@ -186,12 +227,12 @@ footer {
 /* ======== التصميم المتجاوب ======== */
 @media (max-width: 768px) {
     .main-nav ul {
-        display: none; /* إخفاء القائمة على الموبايل (يمكن تطويرها لاحقاً) */
+        display: none;
     }
-    .hero-section h1 {
+    .slide-text h1 {
         font-size: 40px;
     }
-    .hero-section p {
+    .slide-text p {
         font-size: 20px;
     }
 }
