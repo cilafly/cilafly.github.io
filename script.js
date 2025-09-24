@@ -33,5 +33,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // تغيير الصورة كل 5 ثوانٍ
-    setInterval(changeSlide, 5000);
+    setInterval(changeSlide, 4000);
 });
