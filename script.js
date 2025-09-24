@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // قائمة الصور التي ستظهر في السلايدر
     const images = [
-        'images/slider-globe.png',
+        'images/hero-background.png',
         'images/slider-beach.png',
         'images/slider-zipline.png',
         'images/slider-temple.png',
