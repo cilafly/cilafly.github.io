@@ -1,1 +1,69 @@
+/* ======== تنسيقات عامة ======== */
+body {
+    font-family: 'Cairo', sans-serif; /* استخدام خط عربي جميل - يتطلب استيراده من جوجل */
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* لون خلفية رمادي فاتح للصفحة */
+}
 
+/* ======== تنسيق القائمة الرئيسية ======== */
+.main-nav {
+    background-color: #8A2BE2; /* لون بنفسجي مشابه للموقع */
+    color: white;
+    padding: 15px;
+    display: flex; /* لجعل العناصر بجانب بعضها */
+    justify-content: space-between; /* لتوزيع المسافات */
+    align-items: center;
+}
+
+.main-nav .logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin: 0 15px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ======== تنسيق قسم العروض ======== */
+.offers {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.offer-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* حواف دائرية */
+    padding: 20px;
+    margin: 15px;
+    display: inline-block; /* لجعل البطاقات تظهر بجانب بعضها */
+    width: 300px; /* عرض ثابت للبطاقة */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* إضافة ظل خفيف */
+}
+
+.offer-card h3 {
+    color: #8A2BE2; /* لون بنفسجي للعنوان */
+}
+
+.offer-card a {
+    background-color: #8A2BE2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+}
