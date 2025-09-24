@@ -20,11 +20,17 @@ body {
 .main-nav {
     background-color: #8A2BE2; /* لون بنفسجي مشابه للموقع */
     color: white;
-    padding: 15px;
-    display: flex; /* لجعل العناصر بجانب بعضها */
-    justify-content: space-between; /* لتوزيع المسافات */
+    padding-top: 15px;    /* تعديل بسيط لإعطاء مسافة من الأعلى */
+    padding-bottom: 15px; /* تعديل بسيط لإعطاء مسافة من الأسفل */
+}
+
+/* هذا هو الكود الجديد/المعدل */
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
+
 
 .main-nav .logo {
     font-weight: bold;
