@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cila Fly - سيلا فلاي للسفر والسياحة</title>
-    
-    <!-- ربط ملف الأنماط -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- جلب خط Cairo من Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
@@ -17,45 +13,59 @@
 
     <!-- ==================== القائمة الرئيسية ==================== -->
     <nav class="main-nav">
-        <div class="logo">Cila Fly</div>
-        <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">عروض سياحية</a></li>
-            <li><a href="#">حجز فنادق</a></li>
-            <li><a href="#">تذاكر طيران</a></li>
-        </ul>
-        <a href="#" class="contact-button">تواصل معنا</a>
+        <!-- تمت إضافة الحاوية هنا -->
+        <div class="container">
+            <div class="logo">Cila Fly</div>
+            <ul>
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#">عروض سياحية</a></li>
+                <li><a href="#">حجز فنادق</a></li>
+                <li><a href="#">تذاكر طيران</a></li>
+            </ul>
+            <a href="#" class="contact-button">تواصل معنا</a>
+        </div>
     </nav>
 
     <!-- ==================== القسم الرئيسي (Hero ) ==================== -->
     <main class="hero-section">
-        <h1>اكتشف العالم مع Cila Fly</h1>
-        <p>أفضل العروض والوجهات السياحية بين يديك</p>
+        <!-- تمت إضافة الحاوية هنا -->
+        <div class="container">
+            <h1>اكتشف العالم مع Cila Fly</h1>
+            <p>أفضل العروض والوجهات السياحية بين يديك</p>
+        </div>
     </main>
 
     <!-- ==================== قسم أحدث العروض ==================== -->
     <section class="offers">
-        <h2>أحدث العروض السياحية</h2>
-        <div class="offer-card">
-            <h3>عرض تركيا الساحر</h3>
-            <p>السعر يبدأ من 500$</p>
-            <a href="#">التفاصيل</a>
-        </div>
-        <div class="offer-card">
-            <h3>رحلة إلى جزر المالديف</h3>
-            <p>السعر يبدأ من 1200$</p>
-            <a href="#">التفاصيل</a>
-        </div>
-        <div class="offer-card">
-            <h3>مغامرة في تايلاند</h3>
-            <p>السعر يبدأ من 750$</p>
-            <a href="#">التفاصيل</a>
+        <!-- تمت إضافة الحاوية هنا -->
+        <div class="container">
+            <h2>أحدث العروض السياحية</h2>
+            <div class="offers-grid"> <!-- أضفنا هذا الـ div لتنظيم البطاقات لاحقاً -->
+                <div class="offer-card">
+                    <h3>عرض تركيا الساحر</h3>
+                    <p>السعر يبدأ من 500$</p>
+                    <a href="#">التفاصيل</a>
+                </div>
+                <div class="offer-card">
+                    <h3>رحلة إلى جزر المالديف</h3>
+                    <p>السعر يبدأ من 1200$</p>
+                    <a href="#">التفاصيل</a>
+                </div>
+                <div class="offer-card">
+                    <h3>مغامرة في تايلاند</h3>
+                    <p>السعر يبدأ من 750$</p>
+                    <a href="#">التفاصيل</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- ==================== تذييل الصفحة (Footer) ==================== -->
     <footer>
-        <p>جميع الحقوق محفوظة &copy; 2025 لشركة Bono.</p>
+        <!-- تمت إضافة الحاوية هنا -->
+        <div class="container">
+            <p>جميع الحقوق محفوظة &copy; 2025 لشركة Bono.</p>
+        </div>
     </footer>
 
 </body>
