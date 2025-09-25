@@ -11,25 +11,30 @@
 </head>
 <body>
 
-    <!-- ==================== القائمة الرئيسية (محدثة ) ==================== -->
+    <!-- ==================== القائمة الرئيسية (محدثة بالكامل ) ==================== -->
     <nav class="main-nav">
         <div class="container">
             <div class="logo">Cila Fly</div>
-            <ul class="nav-links">
+
+            <!-- زر الهامبرغر الجديد (للموبايل فقط) -->
+            <button class="hamburger" id="hamburger-button">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <ul class="nav-links" id="nav-links-menu">
                 <li><a href="index.html">الرئيسية</a></li>
-                
-                <!-- القائمة المنسدلة الجديدة -->
                 <li class="dropdown">
                     <a href="#">البرامج السياحية <span class="arrow">&#9662;</span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="hajj-umrah.html">برامج الحج والعمرة</a></li>
                         <li><a href="honeymoon.html">برامج شهر العسل</a></li>
                         <li><a href="family.html">برامج عائلية</a></li>
                         <li><a href="adventure.html">برامج المغامرات</a></li>
                         <li><a href="cultural.html">برامج ثقافية</a></li>
-                        <li><a href="hajj-umrah.html">برامج الحج والعمرة</a></li>
                     </ul>
                 </li>
-                
                 <li><a href="hotels.html">حجز فنادق</a></li>
                 <li><a href="flights.html">تذاكر طيران</a></li>
                 <li><a href="about.html">من نحن</a></li>
@@ -40,7 +45,6 @@
 
     <!-- ==================== القسم الرئيسي (Hero Slider) ==================== -->
     <main class="hero-slider">
-        <!-- سيتم إضافة الصور هنا بواسطة الجافاسكريبت -->
         <div class="slide-text">
             <div class="container">
                 <h1>اكتشف العالم مع Cila Fly</h1>
@@ -54,7 +58,6 @@
         <div class="container">
             <h2>أحدث العروض السياحية</h2>
             <div class="offers-grid">
-                
                 <!-- بطاقة عرض مصر -->
                 <div class="offer-card">
                     <img src="images/egypt-offer.png" alt="عرض سياحي إلى مصر">
@@ -64,7 +67,6 @@
                         <a href="#" class="details-button">عرض التفاصيل</a>
                     </div>
                 </div>
-
                 <!-- بطاقة عرض تركيا -->
                 <div class="offer-card">
                     <img src="images/turkey-offer.png" alt="عرض سياحي إلى تركيا">
@@ -74,7 +76,6 @@
                         <a href="#" class="details-button">عرض التفاصيل</a>
                     </div>
                 </div>
-
                 <!-- بطاقة عرض المالديف -->
                 <div class="offer-card">
                     <img src="images/maldives-offer.png" alt="عرض سياحي إلى المالديف">
@@ -84,7 +85,6 @@
                         <a href="#" class="details-button">عرض التفاصيل</a>
                     </div>
                 </div>
-
                 <!-- بطاقة عرض دبي -->
                 <div class="offer-card">
                     <img src="images/dubai-offer.png" alt="عرض سياحي إلى دبي">
@@ -94,7 +94,6 @@
                         <a href="#" class="details-button">عرض التفاصيل</a>
                     </div>
                 </div>
-
                 <!-- بطاقة عرض فرنسا -->
                 <div class="offer-card">
                     <img src="images/paris-offer.png" alt="عرض سياحي إلى فرنسا">
@@ -104,7 +103,6 @@
                         <a href="#" class="details-button">عرض التفاصيل</a>
                     </div>
                 </div>
-
                 <!-- بطاقة عرض السفاري (الجديدة) -->
                 <div class="offer-card">
                     <img src="images/safari-offer.png" alt="عرض سفاري في أفريقيا">
@@ -114,7 +112,6 @@
                         <a href="#" class="details-button">عرض التفاصيل</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
