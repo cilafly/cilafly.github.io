@@ -17,7 +17,7 @@ body {
     box-sizing: border-box;
 }
 
-/* ======== القائمة الرئيسية ======== */
+/* ======== القائمة الرئيسية (محدثة) ======== */
 .main-nav {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -39,27 +39,65 @@ body {
     color: #6a11cb;
 }
 
-.main-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.main-nav ul li {
+.nav-links > li {
     margin: 0 15px;
+    position: relative; /* مهم للقائمة المنسدلة */
 }
 
-.main-nav ul a {
+.nav-links a {
     text-decoration: none;
     color: #333;
     font-weight: 700;
     transition: color 0.3s;
+    display: block;
+    padding: 25px 0; /* لزيادة مساحة الضغط */
 }
 
-.main-nav ul a:hover {
+.nav-links > li > a:hover {
     color: #6a11cb;
 }
+
+.arrow {
+    font-size: 10px;
+    margin-right: 5px;
+}
+
+/* ======== القائمة المنسدلة (Dropdown) ======== */
+.dropdown-menu {
+    display: none; /* إخفاء القائمة بشكل افتراضي */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    min-width: 200px;
+    z-index: 1001;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* إظهار القائمة عند الوقوف على العنصر الأب */
+}
+
+.dropdown-menu li a {
+    padding: 12px 20px;
+    white-space: nowrap; /* لمنع التفاف النص */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f4f4f4;
+}
+
 
 .contact-button {
     background: linear-gradient(45deg, #6a11cb, #2575fc);
@@ -226,8 +264,8 @@ footer {
 
 /* ======== التصميم المتجاوب ======== */
 @media (max-width: 768px) {
-    .main-nav ul {
-        display: none;
+    .nav-links {
+        display: none; /* سنقوم لاحقاً بإضافة زر القائمة هنا */
     }
     .slide-text h1 {
         font-size: 40px;
