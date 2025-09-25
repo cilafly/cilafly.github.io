@@ -11,21 +11,33 @@
 </head>
 <body>
 
-    <!-- ==================== القائمة الرئيسية ==================== -->
+    <!-- ==================== القائمة الرئيسية (محدثة ) ==================== -->
     <nav class="main-nav">
         <div class="container">
             <div class="logo">Cila Fly</div>
-            <ul>
-                <li><a href="#">الرئيسية</a></li>
-                <li><a href="#">عروض سياحية</a></li>
-                <li><a href="#">حجز فنادق</a></li>
-                <li><a href="#">تذاكر طيران</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html">الرئيسية</a></li>
+                
+                <!-- القائمة المنسدلة الجديدة -->
+                <li class="dropdown">
+                    <a href="#">البرامج السياحية <span class="arrow">&#9662;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="honeymoon.html">برامج شهر العسل</a></li>
+                        <li><a href="family.html">برامج عائلية</a></li>
+                        <li><a href="adventure.html">برامج المغامرات</a></li>
+                        <li><a href="cultural.html">برامج ثقافية</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="hotels.html">حجز فنادق</a></li>
+                <li><a href="flights.html">تذاكر طيران</a></li>
+                <li><a href="about.html">من نحن</a></li>
             </ul>
-            <a href="#" class="contact-button">تواصل معنا</a>
+            <a href="contact.html" class="contact-button">تواصل معنا</a>
         </div>
     </nav>
 
-    <!-- ==================== القسم الرئيسي (Hero Slider ) ==================== -->
+    <!-- ==================== القسم الرئيسي (Hero Slider) ==================== -->
     <main class="hero-slider">
         <!-- سيتم إضافة الصور هنا بواسطة الجافاسكريبت -->
         <div class="slide-text">
