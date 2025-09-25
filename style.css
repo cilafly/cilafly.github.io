@@ -27,8 +27,8 @@ body {
 }
 
 .main-nav .container {
-    display: grid; /* <-- التغيير هنا */
-    grid-template-columns: auto 1fr auto; /* <-- وهذا هو السحر كله */
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
     height: 70px;
 }
@@ -41,7 +41,7 @@ body {
 
 .nav-links {
     display: flex;
-    justify-content: center; /* <-- أضف هذا السطر */
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -49,7 +49,7 @@ body {
 
 .nav-links > li {
     margin: 0 15px;
-    position: relative; /* مهم للقائمة المنسدلة */
+    position: relative;
 }
 
 .nav-links a {
@@ -58,7 +58,7 @@ body {
     font-weight: 700;
     transition: color 0.3s;
     display: block;
-    padding: 25px 0; /* لزيادة مساحة الضغط */
+    padding: 25px 0;
 }
 
 .nav-links > li > a:hover {
@@ -72,7 +72,7 @@ body {
 
 /* ======== القائمة المنسدلة (Dropdown) ======== */
 .dropdown-menu {
-    display: none; /* إخفاء القائمة بشكل افتراضي */
+    display: none;
     position: absolute;
     top: 100%;
     right: 0;
@@ -87,18 +87,17 @@ body {
 }
 
 .dropdown:hover .dropdown-menu {
-    display: block; /* إظهار القائمة عند الوقوف على العنصر الأب */
+    display: block;
 }
 
 .dropdown-menu li a {
     padding: 12px 20px;
-    white-space: nowrap; /* لمنع التفاف النص */
+    white-space: nowrap;
 }
 
 .dropdown-menu li a:hover {
     background-color: #f4f4f4;
 }
-
 
 .contact-button {
     background: linear-gradient(45deg, #6a11cb, #2575fc);
@@ -114,12 +113,31 @@ body {
     transform: scale(1.05);
 }
 
+/* ======== زر الهامبرغر (للموبايل) ======== */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1002;
+}
+
+.hamburger-line {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
+}
+
 /* ======== القسم الرئيسي (Hero Slider) ======== */
 .hero-slider {
     position: relative;
     height: 80vh;
     overflow: hidden;
-    background-color: #333; /* لون احتياطي أثناء التحميل */
+    background-color: #333;
 }
 
 .hero-slider .slide {
@@ -176,7 +194,6 @@ body {
 .slide-text p {
     font-size: 24px;
 }
-
 
 /* ======== قسم العروض ======== */
 .offers {
@@ -263,19 +280,7 @@ footer {
     text-align: center;
 }
 
-/* ======== التصميم المتجاوب ======== */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* سنقوم لاحقاً بإضافة زر القائمة هنا */
-    }
-    .slide-text h1 {
-        font-size: 40px;
-    }
-    .slide-text p {
-        font-size: 20px;
-    }
-}
-/* ======== تنسيقات الصفحات الداخلية (مثل "من نحن") ======== */
+/* ======== تنسيقات الصفحات الداخلية ======== */
 .page-content {
     padding: 60px 0;
     background-color: white;
@@ -331,12 +336,11 @@ footer {
     font-weight: bold;
 }
 
-/* ======== حاوية الفيديو المتجاوبة ======== */
 .video-container {
     position: relative;
     overflow: hidden;
     width: 100%;
-    padding-top: 56.25%; /* نسبة 16:9 (9 / 16 * 100) */
+    padding-top: 56.25%;
     margin: 40px 0;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -350,4 +354,87 @@ footer {
     right: 0;
     width: 100%;
     height: 100%;
+}
+
+/* ======== التصميم المتجاوب (محدث بالكامل) ======== */
+@media (max-width: 768px) {
+    .main-nav .container {
+        grid-template-columns: auto 1fr auto;
+        justify-content: space-between;
+    }
+
+    .contact-button {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .logo {
+        grid-column: 2 / 3;
+        justify-self: center;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 100px 40px 40px 40px;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        transition: right 0.4s ease-in-out;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links > li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 15px 0;
+        width: 100%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding-right: 20px;
+        background-color: #f9f9f9;
+        width: 100%;
+    }
+    
+    .dropdown.open .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown > a .arrow {
+        transition: transform 0.3s;
+    }
+
+    .dropdown.open > a .arrow {
+        transform: rotate(180deg);
+    }
+
+    .slide-text h1 {
+        font-size: 36px;
+    }
+    .slide-text p {
+        font-size: 18px;
+    }
 }
